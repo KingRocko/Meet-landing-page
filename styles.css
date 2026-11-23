@@ -69,6 +69,14 @@
 
 @layer font-embedding {
 
+    @font-face {
+        font-family: "Red Hat Display";
+        /* local() intentionally omitted: an installed static version could match but lack the full weight range */
+        src: url("assets/fonts/RedHatDisplay-VariableFont_wght.ttf") format("truetype");
+        font-weight: 300 900;
+        font-style: normal;
+        font-display: swap;
+    }
 }
 
 @layer base {
