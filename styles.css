@@ -100,6 +100,7 @@
         --font-size-200: 1rem;
         --font-size-225: 1.125rem;
         --font-size-500: 2.5rem;
+        --font-size-600: 3rem;
         --font-size-800: 4rem;
 
         --line-height-extratight: 1.1;
@@ -107,7 +108,7 @@
 
         /* The em value always relates to the font size of the element it is applied to, not to the root font size. Formula: 4px Letter Spacing  / 16px Font size = 0.25 em */
         --letter-spacing-widest: 0.25em;
-        
+
         --border-radius-100: 0.5rem; /* TODO: border radius for cards in Figma file is not accessible, hence it has to be adjusted during the implementation */
         --border-radius-full: 999em; /* Creates a pill shape */
 
@@ -127,6 +128,60 @@
     /* Semantic Properties */
     :root {
 
+        --color-bg-body: var(--color-white);
+        --color-bg-button-download: var(--color-cyan-600);
+        --color-bg-button-download-hover: var(--color-cyan-300);
+        --color-bg-button-info: var(--color-purple-600);
+        --color-bg-button-info-hover: var(--color-purple-300);
+
+        --color-text-base: var(--color-slate-900);
+        --color-text-base-footer: var(--color-white);
+        --color-text-tagline: var(--color-cyan-300);
+        --color-text-button: var(--color-white);
+        --color-text-button-version: var(--color-cyan-300);
+
+        --color-border-divider: var(--color-slate-300);
+
+        --font-family-base: var(--font-family-red-hat-display);
+
+        --font-size-heading-primary: var(--font-size-500);
+        --font-size-heading-secondary: var(--font-size-400);
+        --font-size-tagline: var(--font-size-150);
+        --font-size-button: var(--font-size-200);
+        --font-size-base: var(--font-size-200);
+
+        --font-weight-heading: var(--font-weight-black);
+        --font-weight-base: var(--font-weight-medium);
+        --font-weight-button: var(--font-weight-black);
+        --font-weight-tagline: var(--font-weight-black);
+
+        --line-height-heading: var(--line-height-extratight);
+        --line-height-base: var(--line-height-standard);
+
+        --border-radius-button: var(--border-radius-full);
+        --border-radius-images: var(--border-radius-100);
+
+        @media (width >= 42em) {
+            --font-size-heading-primary: var(--font-size-600);
+            --font-size-heading-secondary: var(--font-size-450);
+            --font-size-tagline: var(--font-size-175);
+        }
+
+        @media (width >= 63em) {
+            --font-size-heading-primary: var(--font-size-800);
+            --font-size-heading-secondary: var(--font-size-500);
+            --font-size-tagline: var(--font-size-200);
+            --font-size-base: var(--font-size-225);
+        }
+
+        body {
+            background-color: var(--color-white);
+            font-family: var(--font-family-base), sans-serif;
+            color: var(--color-text-base);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-base);
+            line-height: var(--line-height-base);
+        }
     }
 }
 
